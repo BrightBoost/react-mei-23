@@ -1,11 +1,12 @@
-function List() {
+function List(props) {
     return (
         <>
+            <p>Hoi {props.name}</p>
+            <p>Job: {props.job}</p>
             <ul>
-                <li>Zeilen</li>
-                <li>JS programmeren</li>
-                <li>Kotlin leren</li>
-                <li>Sporten en fietsen</li>
+                {props.hobbies.map((hobby, index) => (
+                    <li key={index}>{hobby}</li>
+                ))}
             </ul>
         </>
     )
